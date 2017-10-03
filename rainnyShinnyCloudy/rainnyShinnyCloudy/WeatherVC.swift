@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class WeatherVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var CurrentTempLabel: UILabel!
 
@@ -17,17 +17,36 @@ class WeatherVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     var currentWeather : CurrentWeather!
+    var forecast : Forecast!
+    var forecasts = [Forecast]()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate=self
         tableView.dataSource=self
         currentWeather = CurrentWeather()
-       
         currentWeather.downloadWeatherDetails{
-            self.updateMainUI()
-
+            self.downloadForecastData{
+                self.updateMainUI()
+            }
         }
       print(CURRENT_WEATHER_URL)
+    }
+    
+    func downloadForecastData(completed:DownloadComplete){
+        let forecastUrl = URL(string :FORECAST_URL)!
+             Alamofire.request(forecastUrl).responseJSON { response in
+                let result = response.result
+                if let dict = result.value as? Dictionary<String,AnyObject>{
+                    if let list = dict["list"] as? [Dictionary<String,AnyObject>]{
+                        
+                        for  obj in list{
+                            let forecast = Forecast(weatherDict: obj)
+                            self.forecasts.append(forecast)
+                            print(obj)
+                        }
+                    }
+                }
+        }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

@@ -15,6 +15,7 @@
 		B2930B741F78D3A600E2535A /* rainnyShinnyCloudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2930B721F78D3A600E2535A /* rainnyShinnyCloudy.xcdatamodeld */; };
 		B2930B761F78D3A600E2535A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2930B751F78D3A600E2535A /* Assets.xcassets */; };
 		B2930B791F78D3A600E2535A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2930B771F78D3A600E2535A /* LaunchScreen.storyboard */; };
+		B2E60D7B1F839DD5004C95C6 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E60D7A1F839DD5004C95C6 /* Forecast.swift */; };
 		D73EB196D27213823D92988A /* Pods_rainnyShinnyCloudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96855A403D252976F4E55B7 /* Pods_rainnyShinnyCloudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		B2930B751F78D3A600E2535A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2930B781F78D3A600E2535A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2930B7A1F78D3A600E2535A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2E60D7A1F839DD5004C95C6 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				B2930B6B1F78D3A600E2535A /* AppDelegate.swift */,
 				B2930B6D1F78D3A600E2535A /* WeatherVC.swift */,
 				B2930B6F1F78D3A600E2535A /* Main.storyboard */,
+				B2E60D7A1F839DD5004C95C6 /* Forecast.swift */,
 				B21C633E1F79304400F2C5F6 /* Constants.swift */,
 				B21C63401F7A115200F2C5F6 /* CurrentWeather.swift */,
 				B2930B751F78D3A600E2535A /* Assets.xcassets */,
@@ -224,6 +227,7 @@
 				B21C63411F7A115200F2C5F6 /* CurrentWeather.swift in Sources */,
 				B2930B6E1F78D3A600E2535A /* WeatherVC.swift in Sources */,
 				B2930B6C1F78D3A600E2535A /* AppDelegate.swift in Sources */,
+				B2E60D7B1F839DD5004C95C6 /* Forecast.swift in Sources */,
 				B21C633F1F79304400F2C5F6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
